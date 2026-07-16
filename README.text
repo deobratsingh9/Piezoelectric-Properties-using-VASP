@@ -1,214 +1,212 @@
-Below is an updated **README.md** that includes the required input files, repository structure, and links to your YouTube channel and GitHub.
+# ⚡ Piezoelectric Properties of Wurtzite AlN using VASP
+
+First-principles calculation of **piezoelectric properties**, **elastic tensor**, **dielectric tensor**, **piezoelectric strain tensor (dij)**, and **electromechanical coupling tensor (kij)** of wurtzite AlN using Density Functional Theory (DFT) and VASP.
 
 ---
 
-# Piezoelectric Properties of Wurtzite AlN using VASP
+## 🎯 Overview
 
-This repository provides a complete workflow for calculating the **piezoelectric properties** of **wurtzite AlN** using **Density Functional Theory (DFT)** with **VASP**.
+Piezoelectric materials convert mechanical deformation into electrical polarization and vice versa, making them essential for:
 
-The tutorial demonstrates how to calculate the **elastic tensor**, **dielectric tensor**, **piezoelectric stress tensor**, **piezoelectric strain tensor (dij)**, and **electromechanical coupling tensor (kij)**, together with the interpretation of these properties for practical piezoelectric applications.
+- Sensors
+- Actuators
+- MEMS/NEMS devices
+- RF filters
+- Energy harvesting
+- Wearable electronics
 
----
-
-# 📚 Overview
-
-Piezoelectric materials convert **mechanical stress into electrical polarization** and vice versa. These materials play a critical role in modern electronic devices including sensors, actuators, resonators, RF filters, and energy harvesting systems.
-
-Among various piezoelectric materials, **wurtzite AlN** is widely used because of its:
-
-* Lead-free composition
-* High thermal stability
-* Excellent chemical resistance
-* Wide band gap
-* High breakdown field
-* CMOS compatibility
-* Good piezoelectric performance
-
-This repository presents a complete first-principles workflow for calculating these properties using **VASP**.
+In this tutorial, we demonstrate a complete workflow for calculating piezoelectric properties of **wurtzite AlN**, one of the most important lead-free piezoelectric semiconductors.
 
 ---
 
-# 🔬 Workflow
-
-The tutorial covers the complete computational workflow:
-
-* Crystal structure preparation
-* Geometry optimization
-* Static electronic calculation
-* Elastic tensor calculation
-* Dielectric tensor calculation
-* Piezoelectric stress tensor calculation
-* Piezoelectric strain tensor calculation
-* Electromechanical coupling tensor calculation
-* Interpretation of piezoelectric properties
-
----
-
-# 📂 Repository Contents
+## 📂 Repository Structure
 
 ```text
-piezoelectric/
-│
+.
 ├── POSCAR
 ├── KPOINTS
-├── OUTCAR
-│
 ├── INCAR.elastic
 ├── INCAR.piezoelectric
+├── OUTCAR
 │
 ├── ELASTIC_TENSOR.in
 ├── DIELECTRIC_TENSOR.in
 ├── PIEZOELECTRIC_STRESS_TENSOR.in
 │
-├── Python Scripts
-├── Example Results
+├── Python_Scripts/
+├── Example_Results/
 └── README.md
 ```
 
 ---
 
-# 📄 Input Files Included
+## 🔬 Computational Workflow
 
-The repository contains all essential files required for reproducing the calculations.
-
-| File                             | Description                                  |
-| -------------------------------- | -------------------------------------------- |
-| `POSCAR`                         | Wurtzite AlN crystal structure               |
-| `KPOINTS`                        | Brillouin-zone sampling                      |
-| `INCAR.elastic`                  | Elastic tensor calculation                   |
-| `INCAR.piezoelectric`            | Piezoelectric calculation                    |
-| `OUTCAR`                         | VASP output file                             |
-| `ELASTIC_TENSOR.in`              | Elastic tensor processing input              |
-| `DIELECTRIC_TENSOR.in`           | Dielectric tensor processing input           |
-| `PIEZOELECTRIC_STRESS_TENSOR.in` | Piezoelectric stress tensor processing input |
+```text
+Crystal Structure
+        ↓
+Geometry Optimization
+        ↓
+Static SCF Calculation
+        ↓
+Elastic Tensor
+        ↓
+Dielectric Tensor
+        ↓
+Piezoelectric Stress Tensor
+        ↓
+Piezoelectric Strain Tensor
+        ↓
+Electromechanical Coupling Tensor
+```
 
 ---
 
-# 📊 Calculated Results
+## 📄 Input Files
+
+| File | Description |
+|--------|------------|
+| POSCAR | Wurtzite AlN structure |
+| KPOINTS | Brillouin zone sampling |
+| INCAR.elastic | Elastic tensor calculation |
+| INCAR.piezoelectric | Piezoelectric calculation |
+| ELASTIC_TENSOR.in | Tensor processing |
+| DIELECTRIC_TENSOR.in | Dielectric analysis |
+| PIEZOELECTRIC_STRESS_TENSOR.in | Piezoelectric analysis |
+| OUTCAR | VASP output |
+
+---
+
+# 📊 Results
 
 ## Piezoelectric Strain Tensor (dij)
 
-**Unit:** pC/N
+**Unit: pC/N**
 
-|         |         |            |         |         |        |
-| ------: | ------: | ---------: | ------: | ------: | -----: |
-|  0.0000 |  0.0000 |     0.0000 |  0.0000 | -2.5699 | 0.0000 |
-|  0.0000 |  0.0000 |     0.0000 | -2.4473 |  0.0000 | 0.0000 |
-| -2.1005 | -2.1005 | **5.0264** |  0.0000 |  0.0000 | 0.0000 |
+```text
+ 0.0000   0.0000   0.0000   0.0000  -2.5699   0.0000
+ 0.0000   0.0000   0.0000  -2.4473   0.0000   0.0000
+-2.1005  -2.1005   5.0264   0.0000   0.0000   0.0000
+```
 
 ---
 
 ## Electromechanical Coupling Tensor (kij)
 
-|         |         |            |         |         |        |
-| ------: | ------: | ---------: | ------: | ------: | -----: |
-|  0.0000 |  0.0000 |     0.0000 |  0.0000 | -0.1086 | 0.0000 |
-|  0.0000 |  0.0000 |     0.0000 | -0.1034 |  0.0000 | 0.0000 |
-| -0.1375 | -0.1375 | **0.3310** |  0.0000 |  0.0000 | 0.0000 |
+```text
+ 0.0000   0.0000   0.0000   0.0000  -0.1086   0.0000
+ 0.0000   0.0000   0.0000  -0.1034   0.0000   0.0000
+-0.1375  -0.1375   0.3310   0.0000   0.0000   0.0000
+```
 
 ---
 
-# ⭐ Key Features
+## ⭐ Key Findings
 
-* Strong longitudinal piezoelectric response (**d₃₃ = 5.03 pC/N**)
-* Significant transverse response (**d₃₁ = d₃₂ = -2.10 pC/N**)
-* Good shear response (**d₁₅ = -2.57 pC/N**, **d₂₄ = -2.45 pC/N**)
-* Moderate electromechanical coupling (**k₃₃ = 0.331**)
-* Tensor symmetry consistent with the hexagonal wurtzite crystal structure
-* Complete workflow using first-principles calculations
+- Strong longitudinal response:
+  
+  ```
+  d33 = 5.03 pC/N
+  ```
 
----
+- Significant transverse response:
 
-# 🚀 Applications
+  ```
+  d31 = d32 = -2.10 pC/N
+  ```
 
-The calculated piezoelectric properties are useful for studying and designing:
+- Good shear response:
 
-* Piezoelectric sensors
-* Pressure sensors
-* MEMS devices
-* NEMS devices
-* Piezoelectric actuators
-* Bulk Acoustic Wave (BAW) resonators
-* Surface Acoustic Wave (SAW) devices
-* RF filters
-* High-frequency communication devices
-* Ultrasonic transducers
-* Energy harvesting systems
-* Flexible electronics
-* Wearable sensors
-* IoT devices
+  ```
+  d15 = -2.57 pC/N
+  d24 = -2.45 pC/N
+  ```
 
----
+- Moderate electromechanical coupling:
 
-# ✅ Advantages of AlN
+  ```
+  k33 = 0.331
+  ```
 
-* Lead-free material
-* Environmentally friendly
-* High thermal stability
-* Excellent chemical resistance
-* Wide band-gap semiconductor
-* High breakdown electric field
-* CMOS compatible
-* Suitable for harsh environments
-* Excellent mechanical properties
+- Tensor symmetry consistent with hexagonal wurtzite AlN.
 
 ---
 
-# 💻 Software Used
+## 🚀 Applications
 
-* VASP
-* Python
-* NumPy
-* Matplotlib
+The calculated properties are useful for:
 
----
-
-# 🎯 Intended Audience
-
-This repository is useful for:
-
-* Materials Science students
-* PhD researchers
-* Computational physicists
-* Computational chemists
-* MEMS researchers
-* Semiconductor researchers
-* Piezoelectric materials researchers
-* Electronic materials scientists
-* Anyone learning DFT using VASP
+- Piezoelectric Sensors
+- MEMS & NEMS
+- Surface Acoustic Wave (SAW) Devices
+- Bulk Acoustic Wave (BAW) Resonators
+- RF Filters
+- Flexible Electronics
+- Ultrasonic Transducers
+- Energy Harvesting Systems
+- Wearable Sensors
+- IoT Devices
 
 ---
 
-# 🎥 YouTube Tutorial
+## ✅ Why AlN?
 
-Watch the complete step-by-step tutorial on YouTube:
-
-**[https://www.youtube.com/@deobratqmatx](https://www.youtube.com/@deobratqmatx)**
-
----
-
-# 📂 GitHub Repository
-
-Explore more VASP, DFT, and Computational Materials Science tutorials:
-
-**[https://github.com/deobratsingh9](https://github.com/deobratsingh9)**
+- Lead-free material
+- Wide band gap
+- High thermal stability
+- High breakdown field
+- CMOS compatible
+- Chemically stable
+- Suitable for harsh environments
 
 ---
 
-# 📧 Contact
+## 💻 Software
 
-**Email:** [deobratqmatx@gmail.com](mailto:deobratqmatx@gmail.com)
+- VASP
+- Python
+- NumPy
+- Matplotlib
 
 ---
 
-# ⭐ Support
+## 🎯 Target Audience
 
-If you find this repository helpful, please:
+- Materials Science Students
+- MSc & PhD Researchers
+- Computational Physicists
+- Computational Chemists
+- Semiconductor Researchers
+- Piezoelectric Device Researchers
 
-⭐ Star this repository
+---
 
-👍 Like the YouTube video
+## 🎥 YouTube Tutorial
+
+**Deobrat QMatX**
+
+👉 https://www.youtube.com/@DeobratQMatX
+
+---
+
+## 📁 GitHub
+
+👉 https://github.com/deobratsingh9
+
+---
+
+## 📧 Contact
+
+deobratqmatx@gmail.com
+
+---
+
+## ⭐ Support
+
+If you find this repository useful:
+
+⭐ Star the repository
 
 📺 Subscribe to the YouTube channel
 
-🔄 Share it with colleagues and researchers working in **piezoelectric materials**, **MEMS**, **DFT**, and **computational materials science**.
+🔄 Share with fellow researchers working on DFT, piezoelectrics, and electronic materials.
