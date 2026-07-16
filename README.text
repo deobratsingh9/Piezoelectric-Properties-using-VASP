@@ -1,0 +1,38 @@
+Piezoelectric Properties (Wurtzite AlN)
+======================================
+
+Piezoelectric Strain Tensor (dij) [pC/N]
+---------------------------------------
+  0.0000   0.0000   0.0000   0.0000  -2.5699   0.0000
+  0.0000   0.0000   0.0000  -2.4473   0.0000   0.0000
+ -2.1005  -2.1005   5.0264   0.0000   0.0000   0.0000
+
+Electromechanical Coupling Tensor (kij)
+---------------------------------------
+  0.0000   0.0000   0.0000   0.0000  -0.1086   0.0000
+  0.0000   0.0000   0.0000  -0.1034   0.0000   0.0000
+ -0.1375  -0.1375   0.3310   0.0000   0.0000   0.0000
+
+Key Features
+------------
+1.	Strong longitudinal piezoelectric response (d33 = 5.03 pC/N).
+2.	Significant transverse piezoelectric response (d31 = d32 = -2.10 pC/N).
+3.	Good shear piezoelectric response (d15 = -2.57 pC/N, d24 = -2.45 pC/N).
+4.	Moderate electromechanical coupling (k33 = 0.331), enabling efficient electrical-to-mechanical energy conversion.
+5.	Tensor symmetry is consistent with the hexagonal wurtzite crystal structure.
+
+Applications
+------------
+Piezoelectric sensors and pressure sensors.
+Micro-Electro-Mechanical Systems(MEMS) actuators and microelectromechanical devices.
+Bulk Acoustic Wave (BAW) and Surface Acoustic Wave (SAW) resonators.
+RF filters and high-frequency communication devices.
+Ultrasonic transducers.
+Vibration energy harvesting systems.
+
+Advantages
+----------
+Lead-free piezoelectric material.
+High thermal stability and chemical resistance.
+Wide band gap suitable for harsh environments.
+Complementary Metal-Oxide-Semiconductor(CMOS)-compatible, enabling integration with semiconductor technology.

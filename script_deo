@@ -1,0 +1,9 @@
+#!/bin/bash
+#SBATCH -J AlN
+#SBATCH -N 1 --exclusive
+#SBATCH --ntasks-per-node=16
+#SBATCH -t 000:20:00
+#SBATCH -A naiss2025-22-1789
+
+module add VASP/6.1.0.28012020-nsc1-intel-2018a-eb
+mpprun vasp_std
